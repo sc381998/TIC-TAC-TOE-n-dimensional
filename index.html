@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tic Tac Toe</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container0" id="container0">
+      <h1 class="text-center" id="title">
+        Tic <span class="text-white">Tac</span> Toe
+      </h1>
+      <small class="hide" id="alertPlayer">Both Player Name is Required</small>
+      <small class="hide" id="alertPlayer1">Dimension is Required</small>
+      <input
+        class="form-control"
+        placeholder="Enter 1st player name"
+        type="text"
+        id="p1"
+        name="p1"
+        value=""
+      />
+      <input
+        class="form-control"
+        placeholder="Enter 2nd player name"
+        type="text"
+        id="p2"
+        name="p2"
+        value=""
+      />
+
+      <div class="form-group">
+        <select id="dimension" class="form-control">
+          <option class="hide" value="" disabled selected
+            >Select your dimension</option
+          >
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+        </select>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-sagar" onclick="startGame()">
+          Start Game
+        </button>
+      </div>
+    </div>
+    <div class="container container1 hide" id="container1">
+      <h1 class="text-center">Tic <span class="text-white">Tac</span> Toe</h1>
+      <div class="row space-around">
+        <button class="btn btn-sagar col-4">
+          X<span class="score xScore">-</span>
+        </button>
+        <button class="btn btn-sagar col-4">
+          O<span class="score oScore">-</span>
+        </button>
+      </div>
+      <div class="text-center text-white mt-4">
+        <small id="turn">Start Game</small>
+      </div>
+      <div class="game-grid" id="game-grid"></div>
+
+      <div class="hide space-around row" id="restart">
+        <div class="restart" onclick="replayGame()">Replay</div>
+        <div class="restart" onclick="restartGame()">Restart</div>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
